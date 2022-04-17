@@ -1,0 +1,17 @@
+<dashboard>
+  <label>Sleep</label>
+  <row>
+    <panel>
+      <title>Sleep</title>
+      <chart>
+        <search>
+          <query>index="fitbit" source="sleep.csv"| rename  "Minutes Asleep" as asleep | eval asleep=round(asleep/60,2) | chart values(asleep) by "Start Time"</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>

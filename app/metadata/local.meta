@@ -1,0 +1,13 @@
+[app/ui]
+owner = peter.luyten
+version = 8.2.5
+modtime = 1650155360.960921000
+
+[app/launcher]
+owner = peter.luyten
+version = 8.2.5
+modtime = 1650155360.963538000
+
+[app/package/check_for_updates]
+version = 8.2.5
+modtime = 1650155360.965043000

@@ -1,0 +1,44 @@
+<dashboard>
+  <label>Weight</label>
+  <row>
+    <panel>
+      <title>Weight</title>
+      <chart>
+        <search>
+          <query>index="fitbit" source="weight.csv" Weight=*| timechart values(Weight) useother=f span=1d</query>
+          <earliest>-7d@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Fat %</title>
+      <chart>
+        <search>
+          <query>index="fitbit" source="weight.csv" Weight=*| timechart values(Fat) span=1d</query>
+          <earliest>-7d@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>BMI</title>
+      <chart>
+        <search>
+          <query>index="fitbit" source="weight.csv" Weight=*| timechart values(BMI) span=1d</query>
+          <earliest>-7d@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">line</option>
+        <option name="charting.drilldown">none</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>

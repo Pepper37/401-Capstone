@@ -1,0 +1,5 @@
+<nav search_view="search">
+	<view name="weight" default="true" />
+	<view name="sleep" />
+	<view name="dashboards" />
+</nav>
